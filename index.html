@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Connect 2026 - Event Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">Campus<span>Connect</span></div>
+      <a href="#register" class="nav-btn">Register</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">COLLEGE SKILL DEVELOPMENT CELL</p>
+      <h1>Campus Connect 2026</h1>
+      <p class="subtitle">A student-focused event for learning, networking, creativity and career growth.</p>
+      <div class="event-meta">
+        <span>📅 15 October 2026</span>
+        <span>📍 Sir Isaac Newton College of Engineering and Technology</span>
+        <span>⏰ 9:30 AM – 4:30 PM</span>
+      </div>
+      <a href="#register" class="primary-btn">Register Now</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">ABOUT THE EVENT</p>
+        <h2>Learn. Connect. Create.</h2>
+        <p>Join students and faculty for a day of workshops, idea sharing and practical activities.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">🎓</div><h3>Skill Workshops</h3><p>Hands-on sessions focused on digital and professional skills.</p></article>
+        <article class="card"><div class="icon">🤝</div><h3>Networking</h3><p>Meet fellow students and exchange ideas in an engaging environment.</p></article>
+        <article class="card"><div class="icon">💡</div><h3>Innovation</h3><p>Present creative ideas and explore practical solutions to real problems.</p></article>
+      </div>
+    </section>
+
+    <section class="details-section">
+      <div class="details-grid">
+        <div>
+          <p class="eyebrow">EVENT DETAILS</p>
+          <h2>Everything you need to know</h2>
+          <ul class="detail-list">
+            <li><strong>Date:</strong> 15 October 2026</li>
+            <li><strong>Time:</strong> 9:30 AM – 4:30 PM</li>
+            <li><strong>Venue:</strong> College Seminar Hall</li>
+            <li><strong>Organiser:</strong> Skill Development Cell</li>
+            <li><strong>Entry:</strong> Free for registered students</li>
+          </ul>
+        </div>
+        <div class="schedule">
+          <h3>Sample Schedule</h3>
+          <div><b>09:30 AM</b><span>Registration & Welcome</span></div>
+          <div><b>10:00 AM</b><span>Keynote Session</span></div>
+          <div><b>11:15 AM</b><span>Skill Workshop</span></div>
+          <div><b>01:00 PM</b><span>Lunch Break</span></div>
+          <div><b>02:00 PM</b><span>Innovation Activity</span></div>
+          <div><b>04:00 PM</b><span>Certificates & Closing</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="register-section" id="register">
+      <div class="form-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">REGISTRATION</p>
+          <h2>Reserve your place</h2>
+          <p>Fill in the details below. All required fields must be completed.</p>
+        </div>
+        <form id="registrationForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full Name *</label>
+              <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+              <small class="error" id="nameError"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email Address *</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+              <small class="error" id="emailError"></small>
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number *</label>
+              <input id="phone" name="phone" type="tel" placeholder="10-digit mobile number" required>
+              <small class="error" id="phoneError"></small>
+            </div>
+            <div class="field">
+              <label for="department">Department *</label>
+              <select id="department" name="department" required>
+                <option value="">Select department</option>
+                <option>CSE</option><option>IT</option><option>ECE</option><option>EEE</option>
+                <option>Mechanical</option><option>Civil</option><option>Other</option>
+              </select>
+              <small class="error" id="departmentError"></small>
+            </div>
+            <div class="field">
+              <label for="year">Year *</label>
+              <select id="year" name="year" required>
+                <option value="">Select year</option>
+                <option>I Year</option><option>II Year</option><option>III Year</option><option>IV Year</option>
+              </select>
+              <small class="error" id="yearError"></small>
+            </div>
+            <div class="field">
+              <label for="session">Preferred Session</label>
+              <select id="session" name="session">
+                <option>Any session</option>
+                <option>Skill Workshop</option><option>Innovation Activity</option><option>Networking</option>
+              </select>
+            </div>
+          </div>
+          <label class="checkbox"><input type="checkbox" id="agree"> I confirm that the information provided is correct. *</label>
+          <small class="error" id="agreeError"></small>
+          <button class="primary-btn submit-btn" type="submit">Submit Registration</button>
+          <div id="successMessage" class="success" role="status"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">REGISTRATION RECORDS</p>
+        <h2>Local demo data</h2>
+        <p>Successful registrations are stored only in this browser using localStorage for demonstration purposes.</p>
+      </div>
+      <div class="record-box">
+        <div class="record-top"><strong id="count">0</strong><span> registrations on this device</span><button id="clearData" class="text-btn" type="button">Clear demo data</button></div>
+        <div id="records"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Campus Connect • Skill Development Cell</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
